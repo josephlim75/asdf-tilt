@@ -20,13 +20,6 @@ install_tilt() {
   mv "${install_path}/tilt" "${bin_path}"
   chmod +x "${bin_install_path}/tilt"
   rm "${install_path}/tilt.tar.gz"
-
-  #echo "Downloading tilt from ${download_url}"
-  #curl -sSL "$download_url" -o "${install_path}/tilt.tar.gz"
-  #tar xzf "${install_path}/tilt.tar.gz" -C "${install_path}"
-  #mv ${install_path}/* ${install_path}/bin
-  #rm -rf "${install_path}/tilt.tar.gz"
-  #echo "Tilt version ${version} has been successfully installed."
 }
 
 get_cpu() {
