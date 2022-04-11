@@ -18,7 +18,7 @@ install_tilt() {
   curl -sSL "$download_url" -o "${install_path}/tilt.tar.gz"
   tar xzf "${install_path}/tilt.tar.gz" -C "${install_path}"
   mv "${install_path}/tilt" "${bin_path}"
-  chmod +x "${bin_install_path}/tilt"
+  chmod +x "${bin_path}"
   rm "${install_path}/tilt.tar.gz"
 }
 
