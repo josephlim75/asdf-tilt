@@ -9,7 +9,6 @@ install_tilt() {
   local install_path=$3
   local platform="$(uname | tr '[:upper:]' '[:lower:]').$(get_cpu)"
   local bin_install_path="$install_path/bin"
-  local bin_path="${bin_install_path}/tilt"
   local download_url=$(get_download_url $version $platform)
 
   mkdir -p "${bin_install_path}"
@@ -17,8 +16,8 @@ install_tilt() {
   echo "Downloading tilt from ${download_url}"
   curl -sSL "$download_url" -o "${install_path}/tilt.tar.gz"
   tar xzf "${install_path}/tilt.tar.gz" -C "${install_path}"
-  mv "${install_path}/tilt" "${bin_path}"
-  chmod +x "$bin_path"
+  mv "${install_path}/tilt" "${bin_install_path}/tilt"
+  chmod +x "${bin_install_path}/tilt"
   rm "${install_path}/tilt.tar.gz"
 
   #echo "Downloading tilt from ${download_url}"
